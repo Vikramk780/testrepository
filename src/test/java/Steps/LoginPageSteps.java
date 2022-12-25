@@ -16,16 +16,17 @@ public class LoginPageSteps {
 	
 	@Given("user enters orange url as {string}")
 	public void user_enters_orange_url_as(String string) {
-		  driverFactory = new DriverFactory();
-		  driver=driverFactory.init_driver("chrome");
-		  driver.get(string);
+		  
+		DriverFactory.getDriver().get(string);
 	}
 
 	@When("User enters username as {string} and password as {string} and cliks on login button")
 	public void user_enters_username_as_and_password_as_and_cliks_on_login_button(String string, String string2) {
+		
 	 
-	   loginPage = new LoginPage(driver);
+	   loginPage = new LoginPage(DriverFactory.getDriver());
 	   loginPage.doLogin(string, string2);
+	   
 	   
 	   
 	   

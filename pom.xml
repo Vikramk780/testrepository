@@ -37,6 +37,14 @@
 			<version>7.7.0</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>1.9.2</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
@@ -59,13 +67,12 @@
 
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>4.4.0</version>
-</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.4.0</version>
+		</dependency>
 
 
 	</dependencies>
@@ -84,11 +91,16 @@
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.0.2</version>
 				</plugin>
+
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.8.0</version>
+					<version>3.10.1</version>
+					<configuration>
+						<!-- put your configurations here -->
+					</configuration>
 				</plugin>
-				
+
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>3.0.2</version>
@@ -110,7 +122,6 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.0.0</version>
 				</plugin>
-				
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
@@ -121,6 +132,8 @@
 						</includes>
 					</configuration>
 				</plugin>
+
+
 			</plugins>
 		</pluginManagement>
 	</build>

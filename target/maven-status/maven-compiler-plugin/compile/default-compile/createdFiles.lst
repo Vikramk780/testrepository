@@ -1,0 +1,3 @@
+qa\driverfactory\DriverFactory.class
+qa\util\ConfigReader.class
+qa\pages\LoginPage.class

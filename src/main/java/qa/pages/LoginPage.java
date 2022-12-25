@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.Wait;
 public class LoginPage {
 
 	WebDriver ldriver;
+	WaitHelper waitHelper;
 	
 ////fluentwaitt//////
 	
@@ -36,12 +37,17 @@ public class LoginPage {
 		
 		ldriver = rdriver;
 		PageFactory.initElements(ldriver, this);
+		waitHelper =new WaitHelper(ldriver);
 	}
 	
 	public void doLogin(String uname,String passwod) {
-		fluentlywait(username).sendKeys(uname);
-		fluentlywait(password).sendKeys(passwod);
-		fluentlywait(loginbtn).click();
+		waitHelper.forThisElementWait(username, 10).sendKeys(uname);
+		waitHelper.forThisElementWait(password, 10).sendKeys(passwod);
+		waitHelper.forThisElementWait(loginbtn, 10).click();
+//		fluentlywait(username).sendKeys(uname);
+//		fluentlywait(password).sendKeys(passwod);
+//		fluentlywait(loginbtn).click();
+		
 		
 	}
 	
