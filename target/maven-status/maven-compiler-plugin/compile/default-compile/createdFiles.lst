@@ -1,3 +1,7 @@
 qa\driverfactory\DriverFactory.class
 qa\util\ConfigReader.class
+qa\pages\HomePage.class
 qa\pages\LoginPage.class
+qa\pages\TimePage.class
+qa\pages\WaitHelper.class
+qa\pages\RecruitmentPage.class

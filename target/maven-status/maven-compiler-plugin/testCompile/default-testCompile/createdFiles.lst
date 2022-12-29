@@ -1,2 +1,6 @@
+Steps\AppHooks.class
+Steps\HomePagesteps.class
 Runners\RunIT.class
 Steps\LoginPageSteps.class
+Steps\TimePageSteps.class
+Steps\RecruitmentPageSteps.class
